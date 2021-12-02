@@ -1,0 +1,14 @@
+plugins {
+    id 'misc.java-application-conventions'
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories{
+    mavenCentral()
+}
+
+dependencies {
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+}

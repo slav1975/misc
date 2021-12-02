@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+        control-tower:
+                 image: tomcat:8.5.73
+                 hostname: same-site-with-tomcat
+                 container_name: same-site-with-tomcat
+                 ports:
+                         - "8080:8080"
+                 volumes:
+                         - ./build/libs/same-site-with-tomcat.war:/usr/local/tomcat/webapps/same-site-with-tomcat.war
+                 command: catalina.sh run
